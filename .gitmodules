@@ -1,0 +1,9 @@
+[submodule "vendor/jasmine"]
+	path = vendor/jasmine
+	url = https://github.com/pivotal/jasmine.git
+[submodule "vendor/phantom-jasmine"]
+	path = vendor/phantom-jasmine
+	url = https://github.com/jcarver989/phantom-jasmine.git
+[submodule "vendor/jasmine-reporters"]
+	path = vendor/jasmine-reporters
+	url = https://github.com/larrymyers/jasmine-reporters.git
