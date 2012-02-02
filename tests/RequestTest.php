@@ -16,7 +16,6 @@ require_once '../src/Request.php';
 /**
  * @author Andrey Kucherenko <andrey@kucherenko.org>
  * @date 01.02.12
- *
  */
 class RequestTest extends PHPUnit_Framework_TestCase
 {
@@ -25,8 +24,9 @@ class RequestTest extends PHPUnit_Framework_TestCase
      *
      * @covers Request::__construct
      */
-    public function testNewRequest() {
-        $fakeRequest = array('1'=>'1');
+    public function testNewRequest()
+    {
+        $fakeRequest = array('name' => 'parameter');
         $request = new Request($fakeRequest);
         $this->assertAttributeEquals($fakeRequest, '_source', $request);
     }
@@ -36,7 +36,8 @@ class RequestTest extends PHPUnit_Framework_TestCase
      *
      * @covers Request::__construct
      */
-    public function testNewRequestWithoutSource() {
+    public function testNewRequestWithoutSource()
+    {
         $request = new Request();
         $this->assertAttributeEquals($_REQUEST, '_source', $request);
     }
@@ -46,18 +47,20 @@ class RequestTest extends PHPUnit_Framework_TestCase
      *
      * @covers Request::get
      */
-    public function testGetParameter() {
-        $request = new Request(array('test'=>'parameter'));
+    public function testGetParameter()
+    {
+        $request = new Request(array('name' => 'parameter'));
 
-        $this->assertEquals('parameter', $request->get('test'));
+        $this->assertEquals('parameter', $request->get('name'));
     }
 
     /**
      * Test for getting not existing parameter from request
      */
-    public function testNotExistingParameter() {
+    public function testNotExistingParameter()
+    {
         $request = new Request(array());
-        $this->assertNull($request->get('test'));
+        $this->assertNull($request->get('name'));
     }
 
 }
