@@ -2,8 +2,29 @@
  * @date 03.02.12
  */
 
-var InputValidator = function() {
-
+/**
+ * Validator constructor
+ * @param string value
+ */
+var InputValidator = function(value) {
+    this._value = null;
+    if (typeof value != 'undefined') {
+        this.setValue(value);
+    }
 }
 
+/**
+ * Set value for validate
+ * @param value
+ */
+InputValidator.prototype.setValue = function(value) {
+    this._value = value;
+}
 
+/**
+ * Get value from validator
+ * @param value
+ */
+InputValidator.prototype.getValue = function() {
+    return this._value;
+}

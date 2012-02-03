@@ -7,6 +7,10 @@
  */
 class Request
 {
+    /**
+     * Array or request data
+     * @var array
+     */
     private $_source = null;
 
     /**
@@ -27,7 +31,7 @@ class Request
      * @return mixed
      */
     public function get($name) {
-//        return isset($this->_source[$name]) ? $this->_source[$name] : null;
+        //return isset($this->_source[$name]) ? $this->_source[$name] : null;
         if (isset($this->_source[$name])) {
             return $this->_source[$name];
         } else {

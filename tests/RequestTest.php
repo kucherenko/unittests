@@ -11,7 +11,7 @@
  *
  */
 
-require_once '../src/Request.php';
+require_once __DIR__ . '/../src/Request.php';
 
 /**
  * @author Andrey Kucherenko <andrey@kucherenko.org>
