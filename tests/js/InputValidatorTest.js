@@ -25,12 +25,4 @@ describe("InputValidator Test", function() {
         expect(inputValidator.getValue()).toEqual(null);
     });
 
-    it("Check for min/max length", function(){
-
-    });
-
-    it("Check for RegExp", function(){
-
-    });
-
 });
