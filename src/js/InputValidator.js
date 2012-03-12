@@ -23,8 +23,16 @@ InputValidator.prototype.setValue = function(value) {
 
 /**
  * Get value from validator
- * @param value
+ * @param string value
  */
 InputValidator.prototype.getValue = function() {
     return this._value;
+}
+
+/**
+ * Set value for validate
+ * @param value
+ */
+InputValidator.prototype.isEmpty = function(value) {
+    return Boolean(this._value);
 }
